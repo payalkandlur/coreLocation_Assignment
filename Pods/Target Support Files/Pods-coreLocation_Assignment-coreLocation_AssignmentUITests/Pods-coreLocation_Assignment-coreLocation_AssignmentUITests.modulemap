@@ -1,0 +1,6 @@
+framework module Pods_coreLocation_Assignment_coreLocation_AssignmentUITests {
+  umbrella header "Pods-coreLocation_Assignment-coreLocation_AssignmentUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

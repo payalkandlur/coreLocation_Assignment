@@ -17,29 +17,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will send you notification on crossing 500m!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1f-tX-Gz5">
-                                <rect key="frame" x="20" y="54" width="374" height="43"/>
+                                <rect key="frame" x="20" y="124" width="374" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4WH-HL-Ewt">
-                                <rect key="frame" x="0.0" y="97" width="414" height="765"/>
-                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eec-P4-nIE">
+                                <rect key="frame" x="20" y="257" width="374" height="30"/>
+                                <state key="normal" title="Share Device Location"/>
+                                <connections>
+                                    <action selector="shareLocationServices:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgn-8k-N8q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4WH-HL-Ewt" firstAttribute="top" secondItem="B1f-tX-Gz5" secondAttribute="bottom" id="0oT-7D-QuT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B1f-tX-Gz5" secondAttribute="trailing" constant="20" id="6El-eW-nMl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4WH-HL-Ewt" secondAttribute="trailing" id="SyJ-6T-M5E"/>
-                            <constraint firstItem="B1f-tX-Gz5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Tfv-hV-Ffx"/>
-                            <constraint firstItem="4WH-HL-Ewt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xh5-xV-nNg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4WH-HL-Ewt" secondAttribute="bottom" id="XzJ-O6-0b7"/>
+                            <constraint firstItem="eec-P4-nIE" firstAttribute="top" secondItem="B1f-tX-Gz5" secondAttribute="bottom" constant="90" id="PcC-7Q-7Bc"/>
+                            <constraint firstItem="B1f-tX-Gz5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Tfv-hV-Ffx"/>
+                            <constraint firstItem="eec-P4-nIE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dn2-dR-9h0"/>
                             <constraint firstItem="B1f-tX-Gz5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tOu-SG-NdQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eec-P4-nIE" secondAttribute="trailing" constant="20" id="vjH-cq-EfJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eec-P4-nIE" secondAttribute="bottom" constant="80" id="wo6-gx-UPZ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="4WH-HL-Ewt" id="V4r-JV-TfA"/>
+                        <outlet property="shareLocBtn" destination="eec-P4-nIE" id="XHE-QR-ifd"/>
                         <outlet property="titleLabel" destination="B1f-tX-Gz5" id="yzJ-CF-AbS"/>
                     </connections>
                 </viewController>

@@ -20,8 +20,17 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>The App requests your location to help determine if you have any significant location changes.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>The App requests your location to help determine if you have any significant location changes.</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -43,9 +52,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>The App requests your location to help determine if you have any significant location changes.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>The App requests your location to help determine if you have any significant location changes.</string>
 </dict>
 </plist>

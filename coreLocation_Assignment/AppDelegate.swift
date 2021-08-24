@@ -13,7 +13,7 @@ import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
     
-    //variable declaration
+    //variable declarations
     var window:UIWindow?
     var locationManager = ViewController.sharedInstance.locationManager
     var coordinates :CLLocation?
@@ -35,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             if let currentLoc = locationManager?.location {
                 //get the location data
                 self.getLocationData(currentLoc)
+                //post new location
                 self.postLocation()
                 
             }
@@ -94,7 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
    
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //post data method every time there is a significant location change
+        //Post data method every time there is a significant location change.
         postLocation()
     }
 }

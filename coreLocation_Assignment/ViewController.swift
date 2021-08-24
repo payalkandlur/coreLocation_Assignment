@@ -23,7 +23,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
    
     func addContent() {
-        self.titleLabel.textColor = UIColor.blue
+        self.titleLabel.textColor = UIColor.purple
+      
     }
 
     @IBAction func shareLocationServices(_ sender: Any) {

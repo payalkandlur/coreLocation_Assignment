@@ -11,7 +11,16 @@ class NetworkService {
     
     static let sharedInstance = NetworkService()
     
-    
+    //MARK: POST
+    /// This is the POST call through URL Session.
+    ///
+    /// - Parameters:
+    ///
+    ///     - withBaseURL: the base url of the API call
+    ///     - params: params to be passed in the call in form of dictionary
+    ///     - body: body to be passed in the call in form of Any Object
+    ///     - headers: headers for the call in the form if dictionary
+    ///     - completion: callback with AnyObject and ServerError Object
     func post(withBaseURL: String,
               params: [String : String]? = nil,
               body: Any? = nil, headers: [String : String]? = nil,
